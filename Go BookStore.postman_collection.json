@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "46043f6b-465f-4076-b817-c3d13325e0ff",
+		"name": "Go BookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/book/",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/book/",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"book",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Apr 2022 16:41:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "946"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"CreatedAt\": \"2022-04-30T22:11:28+05:30\",\n        \"UpdatedAt\": \"2022-04-30T22:11:28+05:30\",\n        \"DeletedAt\": null,\n        \"Name\": \"Wings of Fire\",\n        \"Author\": \"Umang Sharma\",\n        \"Publication\": \"Penguin Publication\"\n    },\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2022-04-30T22:11:32+05:30\",\n        \"UpdatedAt\": \"2022-04-30T22:11:32+05:30\",\n        \"DeletedAt\": null,\n        \"Name\": \"Wings of Fire\",\n        \"Author\": \"Umang Sharma\",\n        \"Publication\": \"Penguin Publication\"\n    },\n    {\n        \"ID\": 3,\n        \"CreatedAt\": \"2022-04-30T22:11:32+05:30\",\n        \"UpdatedAt\": \"2022-04-30T22:11:32+05:30\",\n        \"DeletedAt\": null,\n        \"Name\": \"Wings of Fire\",\n        \"Author\": \"Umang Sharma\",\n        \"Publication\": \"Penguin Publication\"\n    },\n    {\n        \"ID\": 4,\n        \"CreatedAt\": \"2022-04-30T22:11:34+05:30\",\n        \"UpdatedAt\": \"2022-04-30T22:11:34+05:30\",\n        \"DeletedAt\": null,\n        \"Name\": \"Wings of Fire\",\n        \"Author\": \"Umang Sharma\",\n        \"Publication\": \"Penguin Publication\"\n    },\n    {\n        \"ID\": 5,\n        \"CreatedAt\": \"2022-04-30T22:11:35+05:30\",\n        \"UpdatedAt\": \"2022-04-30T22:11:35+05:30\",\n        \"DeletedAt\": null,\n        \"Name\": \"Wings of Fire\",\n        \"Author\": \"Umang Sharma\",\n        \"Publication\": \"Penguin Publication\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/book/{{bookId}}",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT}}/book/{{bookId}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"book",
+								"{{bookId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 May 2022 18:27:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 1,\n    \"CreatedAt\": \"2022-05-05T23:55:25+05:30\",\n    \"UpdatedAt\": \"2022-05-05T23:55:25+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"Wings of Fire\",\n    \"author\": \"Umang Sharma\",\n    \"publication\": \"Penguin Publication\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Wings of Fire 3\",\n    \"Author\": \"Umang Sharma 3\",\n    \"Publication\": \"Penguin Publication 3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/book/",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Wings of Fire\",\n    \"Author\": \"Umang Sharma\",\n    \"Publication\": \"Penguin Publication\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/book/",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"book",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Apr 2022 16:41:34 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "208"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 5,\n    \"CreatedAt\": \"2022-04-30T22:11:34.695259208+05:30\",\n    \"UpdatedAt\": \"2022-04-30T22:11:34.695259208+05:30\",\n    \"DeletedAt\": null,\n    \"Name\": \"Wings of Fire\",\n    \"Author\": \"Umang Sharma\",\n    \"Publication\": \"Penguin Publication\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Test JS\",\n    \"Author\": \"Umang Sharma\",\n    \"Publication\": \"Penguin Publication\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ENDPOINT}}/book/{{bookId}}",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Test JS\",\n    \"Author\": \"Umang Sharma\",\n    \"Publication\": \"Penguin Publication\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT}}/book/{{bookId}}",
+							"host": [
+								"{{ENDPOINT}}"
+							],
+							"path": [
+								"book",
+								"{{bookId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 May 2022 18:27:55 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "192"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 1,\n    \"CreatedAt\": \"2022-05-05T23:55:25+05:30\",\n    \"UpdatedAt\": \"2022-05-05T23:57:55.250252977+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"Test JS\",\n    \"author\": \"Umang Sharma\",\n    \"publication\": \"Penguin Publication\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ENDPOINT}}/book/{{bookId}}",
+					"host": [
+						"{{ENDPOINT}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "bookId",
+			"value": "1"
+		}
+	]
+}

@@ -1,3 +1,7 @@
+/**
+* Controller file which contains all the business logic of the program
+ */
+
 package controllers
 
 import (
